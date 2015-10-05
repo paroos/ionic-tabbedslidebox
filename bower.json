@@ -1,0 +1,9 @@
+{
+  "name": "ionic-tabbedslidebox",
+  "version": "0.1.0",
+  "homepage": "https://github.com/paroos/ionic",
+  "description": "Tabbedslidebox for Ionic",
+  "main": ["./src/tabSlideBox.css", "./src/tabSlideBox.js"],
+  "dependencies": {"ionic" : "~1.1.0"},
+  "license": "MIT"
+}

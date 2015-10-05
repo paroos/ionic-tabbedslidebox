@@ -7,15 +7,15 @@
     <title>Tabbed Slide box</title>
 
     <!-- ionic css -->
-    <link href="http://code.ionicframework.com/1.0.0-rc.4/css/ionic.css" rel="stylesheet">
+    <link href="../bower_components/ionic/release/css/ionic.css" rel="stylesheet">
 
     <!-- your app's css -->
-    <link href="tabSlideBox.css" rel="stylesheet">
+    <link href="../src/tabSlideBox.css" rel="stylesheet">
 
     <!-- ionic/angularjs scripts -->
-    <script src="http://code.ionicframework.com/1.0.0-rc.4/js/ionic.bundle.min.js"></script>
+    <script src="../bower_components/ionic/release/js/ionic.bundle.min.js"></script>
 	
-	<script src="tabSlideBox.js"></script>
+	<script src="../src/tabSlideBox.js"></script>
 	
 	<!-- your app's script -->
     <script>
@@ -46,9 +46,22 @@
 		
         app.controller("IndexCtrl", ['$rootScope', "$scope", "$stateParams", "$q", "$location", "$window", '$timeout', 
 			function($rootScope, $scope, $stateParams, $q, $location, $window, $timeout){
-        	$scope.onSlideMove = function(data){
-				alert("You have selected " + data.index + " tab");
-			};
+				
+				$scope.tabs = [
+					{"text" : "Home"},
+					{"text" : "Games"},
+					{"text" : "Mail"},
+					{"text" : "Car"},
+					{"text" : "Profile"},
+					{"text" : "Favourites"},
+					{"text" : "Chats"},
+					{"text" : "Settings"},
+					{"text" : "Photos"},
+					{"text" : "Pets"}
+				];
+				$scope.onSlideMove = function(data){
+					alert("You have selected " + data.index + " tab");
+				};
         }
         ]);
     </script>
@@ -85,16 +98,7 @@
 			    	<div class="tsb-icons">
 			    		<div class="tsb-ic-wrp">
 							<ion-scroll direction="x" class="tsb-hscroll">
-							<a href="javascript:;" class="ion-home1">Home</a>
-							<a href="javascript:;" class="ion-ios-game-controller-b1">Games</a>
-							<a href="javascript:;" class="ion-email1">Email</a>
-							<a href="javascript:;" class="ion-model-s1">Car</a>
-							<a href="javascript:;" class="ion-person1">Profile</a>
-							<a href="javascript:;" class="ion-heart1">Favourites</a>
-							<a href="javascript:;" class="ion-chatbubbles1">Chats</a>
-							<a href="javascript:;" class="ion-gear-b1">Settings</a>
-							<a href="javascript:;" class="ion-camera1">Photos</a>
-							<a href="javascript:;" class="ion-ios-paw1">Pets</a>
+								<a href="javascript:;" class="{{tab.icon}}" ng-repeat="tab in tabs" on-finish-render="test()">{{tab.text}}</a>
 							</ion-scroll>
 						</div>
 			    	</div>
