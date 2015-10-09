@@ -15,7 +15,7 @@ Installing
 ###Bower: 
 
 ```bash
-bower install https://github.com/paroos/ionic-tabbedslidebox
+bower install https://github.com/paroos/ionic-tabbedslidebox.git
 ```
 
 ###Manually: 
