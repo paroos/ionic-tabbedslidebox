@@ -11,6 +11,15 @@ This component is wrapper of [ionic slidebox][1]. This will contain tabs/icons a
 
 Installing
 ======
+
+###Bower: 
+
+```bash
+bower install https://github.com/paroos/ionic-tabbedslidebox
+```
+
+###Manually: 
+
 - Add `tabSlideBox.css`  and `tabSlideBox.js` in your html after ionic/angular js files
 
 
