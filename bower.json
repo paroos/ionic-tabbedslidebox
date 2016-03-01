@@ -8,7 +8,6 @@
   "license": "MIT",
   "ignore": [
     "example",
-    "dist",
     "node_modules",
     "bower_components"
   ]
